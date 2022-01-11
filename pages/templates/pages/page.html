@@ -1,0 +1,5 @@
+{% extends 'blog/base.html' %}
+{% block title %}{{page.name}}{% endblock title %}
+{% block body %}
+{{page.content|safe}}
+{% endblock body %}

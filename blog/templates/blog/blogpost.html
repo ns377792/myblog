@@ -1,0 +1,127 @@
+{% extends 'blog/base.html' %}
+{% block title %}Blog | Nitin-singh{% endblock title %}
+{% block body %}
+
+
+
+<h3 class="heading">{{blogp.heading}}</h3>
+<div class="container">
+    <div class="main-video">
+        <div class="video">
+            <h3 class="title">{{blogp.name}}</h3>
+            <img src="/media/{{blogp.featured_image}}" alt=""><br><br>
+            <p>{{blogp.content|safe}}</p>
+
+        </div></br></br></br></br>
+        
+        <div class="containersss">
+            <h2>Leave Us a Comment</h2>
+            <form action="{% url 'postComment' %}" method="post">  
+            {% csrf_token %}
+            <input type="text" name="user" placeholder="Your Name" required>
+            <input type="hidden" name="slug" value="{{blogp.slug}}" required>
+             <textarea name="comment" placeholder='Add Your Comment' required></textarea>
+             <button class="commentbtn">Submit</button>
+            </form>
+            <br><br>
+
+            <div class="all-comments">
+                {% for i in comments %}
+                    <div class="one-comment">
+                        <ul>
+                            <li class="fa fa-user"> &nbsp;&nbsp; {{i.user}}</li>
+                            <li>&nbsp;&nbsp; {{i.date}}</li><br>
+                            <li class="commentmsg">{{i.comment}}</li>
+                        </ul>
+                    </div>
+                {% endfor %}
+            </div>
+          </div>
+
+          
+
+ <hr class="hr-text" data-content="Similar Posts">
+
+
+
+          <div class="simlearpost">
+          {% for blog in featured_posts %}
+
+          <div class="single-blog">
+            <!-- Blog Content Start -->
+            <div class="blog-content">
+              </h1><a class="read-more" style="font-size: 20px" href="/">{{blog.name}}</a></>
+              <p>{{blog.description}}</p>
+        
+              <a class="read-more" href="/blog/{{blog.slug}}"> Read more →</a>
+            </div>
+            <!-- Blog Content End -->
+        </div>
+        {% endfor %}
+    </div>
+
+
+
+
+
+
+
+    </div>
+
+
+    <div class="video-lists">
+
+        <div class="video-list">
+            <h1 class="Category">Category</h1>
+            {% for blog in categoryp %}
+            <div class="vid active">
+                <h3 class="title"><a href="/blog/category/{{blog.name}}">{{blog.name}}</a></h3>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+
+    
+
+
+    
+
+
+
+</div>
+
+<section>
+    <br><br>
+    <hr class="hr-text" data-content="Featured Posts">
+    <hr>
+
+    <div class="card-category-1">
+
+        
+        {% for blog in featured_posts %}
+        <div class="basic-card basic-card-aqua">
+            <div class="card-content">
+                <h1>{{blog.name}}</h1>
+                <img src="/media/{{blog.featured_image}}" alt="">
+                <p class="card-text">{{blog.description}}</p>
+            </div>
+
+            <div class="card-link">
+                <a href="/blog/{{blog.slug}}" class="readmore">
+                    Read more →
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+
+    
+
+
+
+    </div>
+</section>
+
+
+
+{% endblock body %}
