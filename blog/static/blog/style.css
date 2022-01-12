@@ -623,7 +623,7 @@ header .icons #menu-bars {
   background: #fff;
   border-radius: 5px;
   padding: 10px;
-  width: 1050px;
+  width: 910px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
 
@@ -891,3 +891,55 @@ input {
     color: #333;
     margin-bottom: 100px;
   }
+
+
+
+  
+/* ================================================================================================================================================================================================================================================================================= */
+.icons{
+  display: flex;
+  margin-top: 15px;
+  margin-left: 40px;
+}
+li{
+  position: relative;
+  list-style: none;
+  height: 70px;
+  width: 70px;
+  margin: 0 10px;
+  border-radius: 50%;
+  background: #dde1e7;
+  cursor: pointer;
+  box-shadow: -3px -3px 7px #ffffff73,
+              3px 3px 5px rgba(94,104,121,0.288);
+}
+li a{
+  line-height: 70px;
+  margin-left: 22.5px;
+  font-size: 27px;
+  color: #b6bbc5;
+}
+li a span{
+  color: #007ae9;
+}
+.first li.shadow-1{
+  box-shadow: inset -3px -3px 7px #ffffff73,
+              inset 3px 3px 5px rgba(94,104,121,0.288);
+}
+.first li.shadow-1 a{
+  font-size: 25px;
+}
+.second li.shadow-2 a{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 55px;
+  width: 55px;
+  line-height: 55px;
+  border-radius: 50%;
+  background: #dde1e7;
+  font-size: 24px;
+  box-shadow: inset -3px -3px 7px #ffffff73,
+              inset 3px 3px 5px rgba(94,104,121,0.288);
+}
