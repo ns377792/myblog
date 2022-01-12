@@ -64,6 +64,7 @@ header .navbar a {
 
 header .navbar a:hover {
   color: var(--red);
+  border-bottom: 3px solid var(--red);
 }
 
 header .icons #menu-bars,
@@ -100,6 +101,11 @@ header .icons #menu-bars {
   color: #333;
   font-size: 2rem;
   padding: 0 1.5rem;
+}
+
+.navbar2 a:hover{
+  color: var(--red);
+  border-bottom: 3px solid var(--red);
 }
 
 
@@ -770,6 +776,7 @@ input {
 }
 .basic-card .card-content h1 {
   font-size: 2.9rem;
+  color: #081f32;
 }
 
 .basic-card .card-text {
@@ -807,9 +814,7 @@ input {
   grid-template-columns: repeat(3, 1fr);
 
 }
-.single-blog {
-  
-}
+
 .single-blog .blog-content {
   padding: 8px;
   margin-top: 25px;
@@ -817,18 +822,25 @@ input {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   background: #fff;
-  box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 .single-blog .blog-content p{
-  font-size: 1.5rem;
+  font-size: 14.8px;
+  font-family: sans-serif;
+}
+.single-blog .blog-content a{
+  font-size: 25.52px;
+  font-family: sans-serif;
+  font-weight: 800;
+  color: #081f32;
 }
 .single-blog .blog-content .read-more {
   font-size: 1.9rem;
   line-height: 1.85;
   font-family: "Khula", sans-serif;
   font-weight: 700;
-  color: #ff854c;
+  color: #007ae9;
   text-transform: uppercase;
   margin-top: 18px;
   position: relative;
@@ -869,4 +881,13 @@ input {
     line-height: 1.5em;
     color: var(--red);
     background-color: #fcfcfa;
+  }
+
+  .ourpagesdata{
+    font-size: 1.8rem;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    color: #333;
+    margin-bottom: 100px;
   }
