@@ -26,8 +26,6 @@ def blogpostreadmore(request, slug):
     featured_category = Category.objects.filter(featured=True)
     return render(request, 'blog/blogpost.html',{"blogp":blogp, "categoryp":categoryp, "comments":comments, "navThemeBar":baseData() , "featured_posts":featured_posts, "featured_category":featured_category})
     
-def about(request):
-    return render(request,'blog/about.html', {"navThemeBar":baseData()})
 
 def categoryposts(request, category):
     blogp = blogpost.objects.filter(category__name = category)
@@ -36,6 +34,7 @@ def categoryposts(request, category):
     return render(request, 'blog/index.html',{"blogs":blogp, "featured_posts":featured_posts, "categoryp":categoryp, "navThemeBar":baseData()})
     
 def Contactus(request):
+    featured_category = Category.objects.filter(featured=True)
     if request.method=="POST":
         name=request.POST['name']
         email=request.POST['email']
@@ -44,8 +43,8 @@ def Contactus(request):
         contact=Contact(name=name, email=email, phone=phone, content=content)
         contact.save()
         messages.success(request, "Thank you for Contact us")
-        return render(request, "blog/contactus.html",{"navThemeBar":baseData()})    
-    return render(request, "blog/contactus.html", {"navThemeBar":baseData()})
+        return render(request, "blog/contactus.html",{"featured_category":featured_category,"navThemeBar":baseData()})    
+    return render(request, "blog/contactus.html", {"featured_category":featured_category,"navThemeBar":baseData()})
 
 def postComment(request):
     if request.method == "POST":
