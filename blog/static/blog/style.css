@@ -218,15 +218,29 @@ header .icons #menu-bars {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     border-radius: 0.5rem;
   }
+  .navbar2{
+    display: none;
+  }
+  .blogreadmorepost{
+    max-width: 300px;
+    min-width: 100px;
+  }
 }
 
 @media (max-width: 450px) {
   html {
     font-size: 50%;
   }
+  .navbar2{
+    display: none;
+  }
 
   .contact .row form .inputBox input {
     width: 100%;
+  }
+  .blogreadmorepost{
+    max-width: 300px;
+    min-width: 100px;
   }
 }
 
