@@ -31,7 +31,8 @@ def categoryposts(request, category):
     blogp = blogpost.objects.filter(category__name = category)
     categoryp = Category.objects.all()
     featured_posts = blogpost.objects.filter(featured_post=True)
-    return render(request, 'blog/index.html',{"blogs":blogp, "featured_posts":featured_posts, "categoryp":categoryp, "navThemeBar":baseData()})
+    featured_category = Category.objects.filter(featured=True)
+    return render(request, 'blog/index.html',{"featured_category":featured_category,"blogs":blogp, "featured_posts":featured_posts, "categoryp":categoryp, "navThemeBar":baseData()})
     
 def Contactus(request):
     featured_category = Category.objects.filter(featured=True)
