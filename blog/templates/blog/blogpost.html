@@ -40,12 +40,13 @@
 
 
 
-        <hr class="hr-text" data-content="Similar Posts">
+       
+       {% if blogp.similar_posts.all %} <hr class="hr-text" data-content="Similar Posts">{% endif %}
 
 
 
         <div class="simlearpost">
-            {% for blog in featured_posts %}
+            {% for blog in blogp.similar_posts.all %}
 
             <div class="single-blog">
                 <!-- Blog Content Start -->

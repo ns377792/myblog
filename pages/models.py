@@ -4,6 +4,7 @@ from django.db import models
      
 class Page(models.Model):
     name = models.CharField(max_length=155, unique=True)
+    sidebar = models.BooleanField(default=False)
     url = models.CharField(max_length=155)
     content = models.TextField()
     

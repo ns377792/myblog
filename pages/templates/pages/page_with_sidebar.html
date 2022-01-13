@@ -1,0 +1,42 @@
+{% extends 'blog/base.html' %}
+{% block title %}{{page.name}}{% endblock title %}
+{% block body %}
+<div class="ourpagesdata">
+    <div class="video-lists">
+        {% if categoryp.count > 0 %}
+        <div class="video-list">
+            <h1 class="Category">Category</h1>
+            {% for blog in categoryp %}
+            <div class="vid active">
+                <h3 class="title"><a href="/blog/category/{{blog.name}}">{{blog.name}}</a></h3>
+            </div>
+            {% endfor %}
+        </div>
+
+        {% endif %}
+
+
+        <br><br><br><br>
+    <div class="center video-lists">
+        <div class="icons first">
+           <li class="social-media-icons"><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+           <li class="social-media-icons"><a href="#"><span class="fab fa-twitter"></span></a></li>
+           <li class="social-media-icons"><a href="#"><span class="fab fa-instagram"></span></a></li>
+           <li class="social-media-icons"><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
+        </div>
+        <div class="icons second">
+           <li class="social-media-icons"><a href="#"><span class="fab fa-whatsapp"></span></a></li>
+           <li class="social-media-icons"><a href="#"><span class="fab fa-telegram-plane"></span></a></li>
+           <li class="social-media-icons"><a href="#"><span class="fab fa-github"></span></a></li>
+           <li class="social-media-icons"><a href="#"><span class="fab fa-google-plus-g"></span></a></li>
+        </div>
+     </div>
+
+
+
+
+    </div>
+{{page.content|safe}}
+</div>
+
+{% endblock body %}

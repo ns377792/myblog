@@ -20,6 +20,7 @@ class blogpost(models.Model):
     featured_image = models.ImageField(upload_to="blog/featrued_image/")
     content = models.TextField()
     date = models.DateField(auto_now_add=True, null=True, blank=True)
+    similar_posts = models.ManyToManyField('self', null=True, blank=True)
 
     def __str__(self):
         return self.name+" - "+str(self.date)
