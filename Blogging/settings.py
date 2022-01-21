@@ -26,9 +26,13 @@ SECRET_KEY = 'django-insecure-6)jl2)6_*8(sumvl=+gp%8xx7ypdlld_@zk*2r-m7)%7+s+lep
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# this is website's IP address 
+# 13.233.123.232
 
 
+ALLOWED_HOSTS = ['www.8store.in', 'https://www.8store.in','127.0.0.1']
+
+CSRF_TRUSTED_ORIGINS = ['https://www.8store.in']
 # Application definition
 
 INSTALLED_APPS = [
@@ -120,6 +124,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
+STATIC_ROOT = 'static'
 STATIC_URL = '/static/'
 STATICFILES_DIR = [
     os.path.join(BASE_DIR, "static"),
