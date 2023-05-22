@@ -30,7 +30,7 @@ DEBUG = True
 # 13.233.123.232
 
 
-ALLOWED_HOSTS = ['www.8store.in', 'https://www.8store.in','127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 CSRF_TRUSTED_ORIGINS = ['https://www.8store.in']
 # Application definition
