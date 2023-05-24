@@ -32,7 +32,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-CSRF_TRUSTED_ORIGINS = ['https://www.8store.in']
+CSRF_TRUSTED_ORIGINS = ['https://blog.nitinsingh.online']
 # Application definition
 
 INSTALLED_APPS = [

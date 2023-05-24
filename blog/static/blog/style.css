@@ -639,16 +639,13 @@ header .icons #menu-bars {
   padding: 10px;
   width: 910px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  
 }
 
 .video p {
   font-size: 1.4rem;
 }
 
-.container .main-video img {
-  width: 100%;
-  border-radius: 5px;
-}
 
 .container .main-video .title {
   color: #333;
@@ -662,26 +659,24 @@ header .icons #menu-bars {
   border-radius: 5px;
 }
 
-.container .video-list {
-  background: rgb(255, 255, 255);
-  border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-}
+
 
 .container .video-list .vid {
   display: flex;
   align-items: center;
+  text-align: center;
   gap: 15px;
-  background: #f7f7f7;
+  background: #fff;
   border-radius: 5px;
   margin: 10px;
   padding: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   cursor: pointer;
 }
 .container .video-list .vid:hover {
   background: #eee;
 }
+
 
 .Category {
   color: #444;
@@ -690,12 +685,10 @@ header .icons #menu-bars {
   padding: 10px;
 }
 
-.container .video-list .vid h3 a {
+
+.container .video-list .vid .title a {
   color: #333;
-  font-size: 2rem;
-  color: var(--red);
-  text-align: center;
-  justify-content: center;
+  font-size: 1.9rem; 
 }
 
 @media (max-width: 991px) {
