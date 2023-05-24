@@ -647,15 +647,10 @@ header .icons #menu-bars {
 }
 
 
-.container .main-video .title {
-  color: #333;
-  font-size: 2.9rem;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
 
 .container .video-lists {
   background: #f7f7f7;
+  margin-right: 40px;
   border-radius: 5px;
 }
 
@@ -664,7 +659,6 @@ header .icons #menu-bars {
 .container .video-list .vid {
   display: flex;
   align-items: center;
-  text-align: center;
   gap: 15px;
   background: #fff;
   border-radius: 5px;
@@ -684,6 +678,7 @@ header .icons #menu-bars {
   text-align: center;
   padding: 10px;
 }
+
 
 
 .container .video-list .vid .title a {
