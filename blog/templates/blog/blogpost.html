@@ -10,9 +10,11 @@
         <div class="video">
             {% comment %} <h3 class="title">{{blogp.name}}</h3> {% endcomment %}
             <img src="/media/{{blogp.featured_image}}" alt=""><br><br>
-            <p>{{blogp.content|safe}}</p>
 
         </div></br></br></br></br>
+        <div class="blog-description">
+        <p>{{blogp.content|safe}}</p>
+        </div>
 
 
         <div class="sharenow">
@@ -48,49 +50,45 @@
                 {% endfor %}
             </div>
         </div>
+        
 
 
 
        
-       {% if blogp.similar_posts.all %} <hr class="hr-text" data-content="Similar Posts">{% endif %}
+
+</div>
+
+<section>
+    <br><br>
+    <hr class="hr-text" data-content="Similar Posts">
+    <hr>
+
+    <div class="card-category-1">
 
 
-
-        <div class="simlearpost">
-            {% for blog in blogp.similar_posts.all %}
-
-            <div class="single-blog">
-                <!-- Blog Content Start -->
-                <div class="blog-content">
-                    </h1><a href="/">{{blog.name}}</a>
-                    <h1 />
-                    <p>{{blog.description}}</p>
-
-                    <a class="read-more" href="/blog/{{blog.slug}}"> Read more →</a>
-                </div>
-                <!-- Blog Content End -->
+        {% for blog in blogp.similar_posts.all %}
+        <div class="basic-card basic-card-aqua">
+            <div class="card-content">
+                <h1>{{blog.name}}</h1>
+                <img src="/media/{{blog.featured_image}}" alt="">
+                <p class="card-text">{{blog.description}}</p>
             </div>
-            {% endfor %}
+
+            <div class="card-link">
+                <a href="/blog/{{blog.slug}}" class="readmore">
+                    Read more →
+                </a>
+            </div>
         </div>
-
-
-
-
-
+        {% endfor %}
 
 
     </div>
+</section>
 
 
 
 
-
-
-
-
-
-
-</div>
 
 <section>
     <br><br>
@@ -115,10 +113,6 @@
             </div>
         </div>
         {% endfor %}
-
-
-
-
 
 
     </div>

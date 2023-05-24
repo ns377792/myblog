@@ -18,6 +18,7 @@ class Nav_menu(models.Model):
         ("menu3", "menu3"),
         ("menu4", "menu4"),
         ("menu5", "menu5"),
+        ("menu6", "menu6"),
     )
     your_menu = models.CharField(max_length=20,default="icon1", choices=MENU_CHOICES,unique=True)
     menuname = models.CharField(max_length=15)
