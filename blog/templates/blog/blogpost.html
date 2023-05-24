@@ -5,10 +5,10 @@
 
 
 <h3 class="heading">{{blogp.heading}}</h3>
-<div class="container blogreadmorepost">
+<div class="blogreadmorepost">
     <div class="main-video">
         <div class="video">
-            <h3 class="title">{{blogp.name}}</h3>
+            {% comment %} <h3 class="title">{{blogp.name}}</h3> {% endcomment %}
             <img src="/media/{{blogp.featured_image}}" alt=""><br><br>
             <p>{{blogp.content|safe}}</p>
 
@@ -20,7 +20,7 @@
 
             <a href="https://www.facebook.com/sharer.php?u=https://blog.nitinsingh.online/blog/{{blogp.slug}}"><i class="fab fa-facebook-square"></i></a>
 
-            <a href="https://twitter.com/share?url=https://blog.nitinsingh.online/blog/{{blogp.slug}}"><i class="fab fa-twitter-square"></i></a>
+            <a href="https://twitter.com/share?url=https://blog.nitinsingh.online/{{blogp.slug}}"><i class="fab fa-twitter-square"></i></a>
       
         </div>
         
